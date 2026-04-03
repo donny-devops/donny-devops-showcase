@@ -305,10 +305,4 @@ This project is licensed under the **MIT License**.
 ## **Acknowledgments**
 
 - Thanks to all contributors  
-- Inspired by modern DevOps best practices  
-
-## **Getting Started**
-
-### **Prerequisites**
-- Docker & Docker Compose  
-- Kubernetes cluster (minikube, kind, or 
+- Inspired by modern DevOps best practices
