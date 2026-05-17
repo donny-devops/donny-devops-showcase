@@ -14,12 +14,22 @@ jobs:
   health:
     name: Green check
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Validate README exists
-        run: test -f README.md
+      - name: Validate required public repo files
+        shell: bash
+        run: |
+          test -f README.md
+          test -f SECURITY.md
+          test -f .github/CODEOWNERS
+
+      - name: Validate docs do not contain obvious placeholders
+        shell: bash
+        run: |
+          ! grep -RInE 'your@email\.com|Use this section|replace me|changeme|lorem ipsum' README.md SECURITY.md .github/CODEOWNERS
 
       - name: Report status
         run: echo "Showcase repository health checks passed."
