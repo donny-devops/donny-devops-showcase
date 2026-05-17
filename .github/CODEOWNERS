@@ -1,0 +1,11 @@
+# CODEOWNERS
+# Owners are automatically requested for review when pull requests change owned paths.
+
+# Default owner
+* @donny-devops
+
+# Public showcase and automation
+README.md @donny-devops
+SECURITY.md @donny-devops
+.github/ @donny-devops
+.github/workflows/ @donny-devops
